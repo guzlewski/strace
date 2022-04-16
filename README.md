@@ -16,6 +16,3 @@ make
 or
 ./strace.out -p [pid]
 ```
-
-## License
-Copyright (c) guzlewski. All rights reserved.
