@@ -21,9 +21,8 @@ int main(int argc, char** argv)
 	if (argc == 1)
 	{
 		printf("Usage:\n");
-		printf("\t%s [executable] [arg1] ...\n", argv[0]);
-		printf("\tor\n");
-		printf("\t%s -p [pid]\n", argv[0]);
+		printf("\t%s EXECUTABLE [arg1] ... [argn]\n", argv[0]);
+		printf("\t%s -p PID\n", argv[0]);
 	}
 	else if (strcmp(argv[1], "-p") == 0)
 	{
@@ -118,7 +117,6 @@ void parent(pid_t pid)
 
 void printerror(char* type)
 {
-	char buffer[256];
 	snprintf(buffer, 256, "Error %s", type);
 	perror(buffer);
 	exit(0);
